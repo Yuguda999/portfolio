@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: aquamarine;
+        }
+        form{
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 40px;
+            background-color: aliceblue;
+            position: relative;
+
+        }
+        .addinput, textarea{
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 10px;
+        }
+        textarea{
+            height: 100px;
+        }
+        input, textarea:focus{
+            outline: none;
+        }
+        .addbtn{
+            border: none;
+            margin-bottom: 10px;
+            background-color: rgb(89, 131, 131);
+            color: #fff;
+            position: relative;
+            width: 110%;
+            padding: 10px;
+            transition: 0.7s;
+            cursor: pointer;
+        }
+        .addbtn:hover{
+            background-color: rgb(54, 77, 77);
+        }
+    </style>
+</head>
+<body>
+    <h1>Add A PROJECT</h1>
+    <form action="" name="form" method="post" id="addform">
+        <input type="text" placeholder="Project title" name="title" class="addinput">
+        <textarea name="body" id="" cols="30" rows="10" placeholder="Project description"></textarea>
+        <input type="text" placeholder="image url" name="image-url" class="addinput">
+        <button type="submit" class="addbtn">Add To Portfolio</button>
+    </form>
+    <a href="{{url_for('home')}}">Home</a>
+</body>
+</html>

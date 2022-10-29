@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="url_for('static', filename='style.css')">
+    <title>Yuguda's Portfolio</title>
+
+  <style>
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Poppins:ital,wght@0,500;1,100&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.home-container{
+    margin: 100px 15vw 0;
+
+
+}
+
+.navbar-nav{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 50px;
+}
+
+.home{
+    height: 600px;
+}
+.side-contact{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 50px;
+    padding: 0;
+    right: 1000px;
+    transition: 1s;
+
+}
+.side-contact a{
+    font-size: 25px;
+    color: #021c4c;
+    padding: 10px ;
+}
+
+.profile-pic{
+    position: relative;
+    bottom: 450px;
+    left: 100px;
+
+
+}
+.circle1{
+    background-color: #fff;
+    width: 180px;
+    height: 280px;
+    position: relative;
+    top: 250px;
+    border-radius: 50%;
+    transform: rotate(30deg);
+    left: 20px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+
+}
+
+.circle2{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    background-color: #021c4c;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    left: 100px;
+    bottom: 1000px;
+    transition: 1.5s;
+
+}
+.profile-pic img{
+    position: relative;
+    width: 230px;
+    z-index: 1;
+    left: 1000px;
+    transition: 1s;
+}
+.description{
+    position: relative;
+    bottom: 420px;
+    padding-left: 10px;
+}
+.description h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.description p{
+    font-weight: 600;
+    color: #8a8b8dea;
+    padding: 10px 0;
+}
+.btna {
+    position: relative;
+    bottom: 100px;
+    left: 10px;
+
+}
+.btna a {
+    border: 2px solid #021c4c;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #021c4c;
+    font-size: 1.1em;
+    transition: 1s;
+}
+
+
+.btna a:hover{
+    color: #fff;
+    background-color: #021c4c;
+}
+
+.about{
+    margin: 0 40px;
+    padding: 20px;
+    text-align: center;
+    background-color: #212529;
+    color: #fff;
+
+}
+.desc h2{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #fff;
+    border-bottom-width: 2px;
+    border-bottom-width: 1px;
+    font-size: 50px;
+}
+.desc img{
+    margin-bottom: 10px;
+    width: 200px;
+    border-radius: 7px;
+}
+p{
+    color: rgb(197, 194, 194);
+}
+.desc a{
+    margin-top: 10px;
+}
+
+#skills{
+    text-align: center;
+    padding: 40px;
+    font-size: 25px;
+
+}
+#skills h2{
+    font-size: 40px;
+}
+#skills h4{
+    font-size: 20px;
+    text-align: left;
+}
+#skills button{
+    font-size: 25px;
+    background-color: #212529;
+    color: #fff;
+}
+#skills button i{
+    margin-right: 15px;
+}
+.progress{
+    height: 7px;
+    margin-bottom: 20px;
+}
+
+#qualification{
+    text-align: center;
+    padding: 0 50px;
+    position: relative;
+    margin: 40px;
+
+}
+.qualification-container{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 20px;
+    display: block;
+    transition: transform 0.5s;
+
+}
+.qualification-container div{
+    background-color: #212529;
+    color: #fff;
+}
+.qualification-container .phy{
+    padding: 20px;
+    position: relative;
+    width: 50%;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.qualification-container .pyth{
+    padding: 20px;
+    position: relative;
+    left: 51%;
+    width:50%;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.qualification-container .web{
+    padding: 20px;
+    position: relative;
+    width: 50%;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.work-container{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 20px;
+    position: relative;
+    top: 15px;
+    transition: transform 0.5s;
+    display: none;
+}
+.work-container div{
+    background-color: #212529;
+    color: #fff;
+    padding: 20px;
+}
+
+.freelancing{
+    position: relative;
+    width: 50%;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.qualification-btn{
+    display: inline-block;
+}
+.qualification-btn span{
+    margin:0 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+#indicator{
+    width: 100px;
+    border: none;
+    background: #000;
+    height: 3px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    transform: translate(40px, -20px);
+    transition: transform 0.5s;
+}
+
+#portfolio{
+    text-align: center;
+    background-color: #212529;
+    color: #fff;
+    padding: 40px 0;
+    margin:100px 40px;
+}
+#portfolio img{
+    width: 40%;
+    margin: 10px;
+    border-radius: 5px;
+}
+.left{
+    text-align: left ;
+}
+.carousel-inner .left{
+    padding:0 30%;
+}
+.carousel-indicators{
+    position: absolute;
+    bottom: -50px;
+}
+#portfolio a{
+    padding: 0 20px;
+}
+.carousel-control-prev{
+    margin:  10% 0 0 10%;
+}
+.carousel-control-next{
+    margin:  10% 10% 0 0;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    width: 20px;
+}
+
+#cta {
+    margin: 40px;
+    text-align: center;
+    color: #fff;background-image: linear-gradient(
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.75)
+      ),url("https://cdn.wallpapersafari.com/90/36/buSCgx.png");
+    background-position: center;
+    background-size: contain;
+    padding: 20px;
+
+
+}
+#cta h3{
+    font-size:35px;
+    font-weight: 600;
+}
+#cta h5{
+    padding: 20px 50px;
+    line-height: 2;
+
+}
+#cta a{
+    margin-bottom: 10px;
+}
+#cta img{
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.testimonial{
+    width: 100%;
+    height: 100vh;
+    background: #f6fbff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.testimonial h2{
+    font-size: 30px;
+    position: relative;
+    margin-bottom: 50px;
+}
+.review-box{
+    width: 90%;
+    max-width: 700px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: -10px 10px 40px rgba(0,0,0,0.25);
+    position: relative;
+    overflow: hidden;
+}
+.card{
+    height: 300px;
+    padding: 40px;
+    color: #777;
+    line-height: 22px;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+
+
+}
+.card::before{
+    content: "";
+    width: 110px;
+    height: 110px;
+    border-bottom-right-radius: 100%;
+    background-color: #212529;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.profile img{
+    width: 70px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.profile h3{
+    font-size: 26px;
+    color: #212529;
+    margin-bottom: 8px;
+}
+#slide {
+    width: 100%;
+    padding-right: 60px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    transition: 0.5s;
+
+
+
+}
+
+.side-bar{
+    width: 60px;
+    height: 100%;
+    padding: 15px 0;
+    box-sizing: border-box;
+    background: #212529;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    right: 0;
+    top: 0;
+
+
+
+}
+.side-bar i{
+    font-size: 30px;
+    padding: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+::selection{
+    background-color: #212529;
+    color: #fff;
+}
+
+
+ #contact{
+     padding: 40px;
+ }
+ #contact h2{
+    text-align: center;
+    margin-bottom: 40px;
+ }
+ .items{
+     display: flex;
+     color: #212529;
+     margin-bottom: 10px;
+ }
+ .items i{
+     font-size: 30px;
+     padding-right: 20px;
+ }
+ input, textarea{
+     display: block;
+     background-color: transparent;
+     border: none;
+     border-bottom: 1px solid #212529;
+     padding-bottom: 20px;
+     margin-bottom: 20px;
+     width: 400px;
+ }
+ input, textarea:focus{
+     outline: none;
+ }
+ footer{
+     background-image: radial-gradient(#777, #212529);
+     padding: 40px;color: aliceblue;
+ }
+.quick-link{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+}
+.quick-link a{
+    text-decoration: none;
+    color: #8a8b8dea;
+    margin-bottom: 10px;
+}
+.social{
+    margin-bottom: 100px;
+}
+.social i{
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+@media screen and (min-width: 768px){
+    .home{
+        display: flex;
+        flex-direction: row;
+        height: 500px;
+    }
+    .side-contact{
+        order: 1;
+    }
+    .description{
+        order:2;
+        top: 70px;
+        left: 20px;
+        margin-right: 10px;
+
+    }
+    .profile-pic{
+        order: 3;
+        bottom: 230px;
+        left: 20px;
+
+    }
+    .btna {
+        position: relative;
+        bottom: 160px;
+        left: 10px;
+
+    }
+    .btna a{
+        padding:10px 35%;;
+    }
+    .navbar-nav {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px;
+        align-items: flex-end;
+    }
+    #skills{
+        padding: 200px;
+    }
+    .work-container{
+        bottom: 510px;
+    }
+    #cta .row{
+        text-align: left;
+        margin: 40px;
+    }
+    #cta a{
+        width: 100%;
+        margin-top: 50px;
+
+    }
+
+   #cta h5{
+       padding-left: 0;
+   }
+}
+  </style>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">YMS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link" href="#about">About</a>
+              <a class="nav-link" href="#skills">Skills</a>
+              <a class="nav-link" href="#qualification">Qualifications</a>
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+              <a class="nav-link" href="#testimonial">Testimonial</a>
+              <a class="nav-link" href="#contact">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <section class="home-container" id="home">
+      <div class="home">
+        <div class="side-contact" id="side">
+            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/Yuguda999"><i class="bi bi-github"></i></a>
+            <a href="https://wa.me/2348145243177?text=Hi,%20i'm%20yuguda.%20Let's%20help%20build%20your%20project"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://twitter.com/YugudaP"><i class="bi bi-twitter"></i></a>
+        </div>
+        <div class="profile-pic">
+            <div class="circle1"></div>
+            <div class="circle2" id="ball"></div>
+            <img src="static/images/img.png" id="profile" alt="">
+        </div>
+        <div class="description">
+            <h2>Holla, I'm Yuguda</h2>
+            <h5>A full stack developer</h5>
+            <p>High level of experience in designing, developing and deployment of web apps, desktop apps, restfull apis, quality works and more</p>
+        </div>
+      </div>
+    <div class="btna">
+      <a href="" >Contact Me  <i class="bi bi-send"></i> </a>
+    </div>
+    </section>
+    <section class="about" id="about">
+      <div class="desc container-fluid">
+        <h2>About Me</h2>
+        <img src="https://lh3.googleusercontent.com/a/ALm5wu3DGqT0K6BDeIi_uqSzzDs43MW18bf_akCd_BeF=s288-p-rw-no" alt="">
+        <P>Logical and result-driven programmer, with extensive knowledge and years of experience delivering quality work. Motivated developer who demonstrates potential skills and
+
+          Well, i love to devise elaborate methods for solving  problems
+        </P>
+
+        <div class="about-exp row">
+          <div class="exp col-md-4">
+            <h3>05+</h3>
+            <p>years of experience programming</p>
+          </div>
+          <div class="proj col-md-4">
+            <h3>20+</h3>
+            <p>completed projects</p>
+          </div>
+          <div class="work col-md-4">
+            <h3>02+</h3>
+            <p>company worked</p>
+          </div>
+        </div>
+        <a href="{{url_for('download_file')}}" class="btn btn-light btn-lg">Download CV</a>
+      </div>
+        
+    </section>
+    <!-----------SKILLS---------->
+    <section id="skills">
+      <h2><u>Ski</u>lls</h2>
+      <div class="row">
+
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <i class="bi bi-laptop"></i> Frontend Developer
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <h4>Html</h4>
+                <div class="progress">
+                  <div class="progress-bar bg-dark" role="progressbar" style="width: 90%"></div>
+                </div>
+                <h4>CSS</h4>
+                <div class="progress">
+                  <div class="progress-bar bg-dark" role="progressbar" style="width: 70%"></div>
+                </div>
+                <h4>Bootstrap</h4>
+                <div class="progress">
+                  <div class="progress-bar bg-dark" role="progressbar" style="width: 85%"></div>
+                </div>
+                <h4>JavaScript</h4>
+                <div class="progress">
+                  <div class="progress-bar bg-dark" role="progressbar" style="width: 75%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <i class="bi bi-server"></i> Backend Developer
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <h4>Python</h4>
+                <div class="progress">
+                  <div class="progress-bar bg-dark" role="progressbar" style="width: 90%"></div>
+                </div>
+                <h4>SQLite</h4>
+                <div class="progress">
+                  <div class="progress-bar bg-dark" role="progressbar" style="width: 80%"></div>
+                </div>
+                <h4>Postgresql</h4>
+                <div class="progress">
+                  <div class="progress-bar bg-dark" role="progressbar" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <i class="bi bi-palette"></i> Designer
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <h4>Canva</h4>
+                <div class="progress">
+                  <div class="progress-bar bg-dark" role="progressbar" style="width: 80%"></div>
+                </div>
+                <h4>Photoshop</h4>
+                <div class="progress">
+                  <div class="progress-bar bg-dark" role="progressbar" style="width: 60%"></div>
+                </div>
+                <h4>Figma</h4>
+                <div class="progress">
+                  <div class="progress-bar bg-dark" role="progressbar" style="width: 60%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <i class="bi bi-app"></i> App Developer
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <h4>Kivy</h4>
+                <div class="progress">
+                  <div class="progress-bar bg-dark" role="progressbar" style="width: 90%"></div>
+                </div>
+                <h4>Tkinter</h4>
+                <div class="progress">
+                  <div class="progress-bar bg-dark" role="progressbar" style="width: 90%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                <i class="bi bi-clipboard-data-fill"></i> Data Analyst
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <h4>Python</h4>
+                <div class="progress">
+                  <div class="progress-bar bg-dark" role="progressbar" style="width: 90%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                <i class="bi bi-filetype-py"></i> Scriptor
+              </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <h4>Python</h4>
+                <div class="progress">
+                  <div class="progress-bar bg-dark" role="progressbar" style="width: 90%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                <i class="bi bi-motherboard"></i> Electronics
+              </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <h4>Basic Electronic Components</h4>
+                <div class="progress">
+                  <div class="progress-bar bg-dark" role="progressbar" style="width: 80%"></div>
+                </div>
+                <h4>Arduino</h4>
+                <div class="progress">
+                  <div class="progress-bar bg-dark" role="progressbar" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--------------Qualification------------->
+    <section id="qualification">
+      <div class="qualification-btn">
+        <span onclick="education()">Education</span> 
+        <span onclick="work()">Work</span>
+        <hr id="indicator">
+      </div>
+      <div class="qualification-container" id="educ">
+        <div class="phy">
+          <h4>Physics</h4>
+          <p>Ahmadu Bello University</p>
+          <p>Drop out - 2022, country and school is crazy</p>
+        </div>
+        <div class="pyth">
+          <h4>Python Engineer</h4>
+          <p>Udemy-100 days of code by Angela Yu</p>
+          <p>2020 - 2021</p>
+        </div>
+        <div class="web">
+          <h4>Web Development</h4>
+          <p>Udemy</p>
+          <p>2020 - 2021</p>
+        </div>
+        <div class="pyth">
+          <h4>Python Developer</h4>
+          <p>Programming Hero</p>
+          <p>2018 - 2019</p>
+        </div>
+        <div class="web">
+          <h4>Web Development</h4>
+          <p>Programming Hero</p>
+          <p>2021 - 2022</p>
+        </div>
+      </div>
+      <div class="work-container" id="wrk">
+        <div class="freelance">
+          <h4>FreeLancing</h4>
+          <p>No potential work history yet, want to make one with your company</p>
+        </div>
+      </div>
+    </section>
+
+    <!------------Portfolio------------>
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <p>Most Recent Work</p>
+
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          {% for project in projects %}
+          <div class="carousel-item active">
+            <img src={{project.img_url}} alt="">
+            <div class="left">
+              <h4>{{project.title}}</h4>
+              <p>{{project.body}}</p>
+              <a href="" class="btn btn-light btn-md">Demo <i class="bi bi-arrow-bar-right"></i></a>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- call to action -->
+    <section id="cta">
+      <div class="cta row">
+        <div class="col-lg-6 col-md-6">
+          <h3>You have a new Project?</h3>
+          <h5>Contact me now let's get your new project up and running while sipping some coffee <i class="bi bi-cup-hot"></i></h5>
+          <a href="#contact" class="btn btn-light btn-lg">Contact Me <i class="bi bi-send"></i></a>
+        </div>
+        <d class="col-lg-6 col-md-6">
+          <img src="https://images.pexels.com/photos/927451/pexels-photo-927451.jpeg?auto=compress&cs=tinysrgb&w=400" alt="">
+        </d>
+      </div>
+    </section>
+
+    <!-- testimonial section -->
+      <section id="testimonial">
+        <div class="testimonial">
+          <h2>Testimonial</h2>
+          <h5>Customer's Review</h5>
+          <div class="review-box">
+            <div id="slide">
+              <div class="card">
+                <div class="profile">
+                  <img src="static/images/t1.jpg" alt="">
+                  <div>
+                    <h3>Charles K. Mann</h3>
+                    <p>Web Designer</p>  
+                  </div> 
+                </div>
+                <p>Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning.</p>
+              </div>
+  
+              <div class="card">
+                <div class="profile">
+                  <img src="static/images/t2.jpg" alt="">
+                  <div>
+                    <h3>Melissa S. Heuer</h3>
+                    <p>Web Designer</p>  
+                  </div> 
+                </div>
+                <p>Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning.</p>
+              </div>
+  
+              <div class="card">
+                <div class="profile">
+                  <img src="static/images/t3.jpg" alt="">
+                  <div>
+                    <h3>Ja'far Haroun Tahan</h3>
+                    <p>Web Designer</p>  
+                  </div> 
+                </div>
+                <p>Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning.</p>
+              </div>
+  
+              <div class="card">
+                <div class="profile">
+                  <img src="static/images/t4.jpg" alt="">
+                  <div>
+                    <h3>Carmen J. Carter</h3>
+                    <p>Web Designer</p>  
+                  </div> 
+                </div>
+                <p>Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning.</p>
+              </div>
+            </div>
+            <div class="side-bar">
+              <i class="bi bi-arrow-up-circle-fill" id="upArrow"></i>
+              <i class="bi bi-arrow-down-circle-fill" id="downArrow"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- contact -->
+    <section id="contact">
+      <h2>Get in touch</h2>
+      <div class="row">
+        <div class="contact-me col-md-6 col-lg-6">
+          <div class="items">
+            <i class="bi bi-phone"></i>
+            <div>
+              <h4>Call Me</h4>
+              <p>+2348145243177</p>
+            </div>
+          </div>
+          <div class="items">
+            <i class="bi bi-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p>elemenx93@gmail.com</p>
+            </div>
+          </div>
+          <div class="items">
+            <i class="bi bi-geo-alt"></i>
+            <div>
+              <h4>Location</h4>
+              <p>Zaria, Nigeria</p>
+            </div>
+          </div>
+        </div>
+        <div class="form col-md-6 col-lg-6">
+          <form action="{{url_for('contact')}}" method="post">
+            <input type="text" placeholder="name" name="name" required>
+            <input type="email" placeholder="email" name="email" required>
+            <textarea id="" cols="30" rows="5" placeholder="message" name="message" required></textarea>
+            <button type="submit" class="btn btn-dark btn-md">send message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    <footer>
+      <div class="row">
+        <div class="title col-md-6 col-lg-6">
+          <h1>Yuguda</h1>
+          <p>Full Stack Developer</p>
+        </div>
+        <div class=" quick-link link col-md-6 col-lg-6">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">ContactMe</a>
+        </div>
+
+      </div>
+      <div class="social">
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-twitter"></i>
+        <i class="bi bi-instagram"></i>
+      </div>
+      <center><p>All rights reserved &#169Yuguda999 - 2022</p></center>
+    </footer>
+    <script>
+      if(window.innerHeight > 800){
+        alert("here")
+      }
+      var Education = document.getElementById("educ")
+      var Work = document.getElementById("wrk")
+      var Indicator = document.getElementById("indicator")
+      var profile = document.getElementById("profile")
+      var side = document.getElementById("side")
+      var ball = document.getElementById("ball")
+
+      profile.style.left = "0"
+      side.style.right = "0"      
+      ball.style.bottom = "0"
+
+      
+
+      function education(){
+        Education.style.display =  "block"
+        Work.style.display = "none"
+        Indicator.style.transform = "translate(40px, -20px)"
+        Indicator.style.width = "100px"
+
+        
+      }
+
+      function work(){
+        Education.style.display = "none"
+        Work.style.display = "block"
+        Indicator.style.transform = "translate(220px, -20px)"
+        Indicator.style.width = "50px"
+      }
+
+      var slide = document.getElementById("slide")
+      var upArrow = document.getElementById("upArrow")
+      var downArrow= document.getElementById("downArrow")
+
+      let x = 0;
+      upArrow.onclick = function(){
+        if(x>-900){
+          x=x-300;
+        slide.style.top = x+"px"
+        }
+        
+      }
+      downArrow.onclick = function(){
+        if (x<0){
+          x=x+300;
+        slide.style.top = x+"px"
+        }
+      }
+
+      
+    </script>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
