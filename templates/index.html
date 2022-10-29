@@ -54,7 +54,7 @@ body{
 .profile-pic{
     position: relative;
     bottom: 450px;
-    left: 100px;
+    left: 50px;
 
 
 }
@@ -106,7 +106,7 @@ body{
 }
 .btna {
     position: relative;
-    bottom: 100px;
+    bottom: 70px;
     left: 10px;
 
 }
@@ -188,7 +188,7 @@ p{
 }
 .qualification-container{
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    padding: 20px;
+    padding: 1px;
     display: block;
     transition: transform 0.5s;
 
@@ -198,27 +198,26 @@ p{
     color: #fff;
 }
 .qualification-container .phy{
-    padding: 20px;
+    padding: 10px;
     position: relative;
-    width: 50%;
+    width: 100%;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 .qualification-container .pyth{
-    padding: 20px;
+    padding: 10px;
     position: relative;
-    left: 51%;
-    width:50%;
+    width:100%;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 .qualification-container .web{
-    padding: 20px;
+    padding: 10px;
     position: relative;
-    width: 50%;
+    width: 100%;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 .work-container{
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    padding: 20px;
+    padding: 10px;
     position: relative;
     top: 15px;
     transition: transform 0.5s;
@@ -239,12 +238,13 @@ p{
     display: inline-block;
 }
 .qualification-btn span{
-    margin:0 20px;
-    font-size: 30px;
+    font-size: 20px;
     cursor: pointer;
+    padding-right: 10px;
 }
 #indicator{
-    width: 100px;
+    visibility: hidden;
+    width: 10px;
     border: none;
     background: #000;
     height: 3px;
@@ -516,6 +516,81 @@ p{
     .work-container{
         bottom: 510px;
     }
+    #qualification{
+    text-align: center;
+    padding: 0 50px;
+    position: relative;
+    margin: 40px;
+
+}
+.qualification-container{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 20px;
+    display: block;
+    transition: transform 0.5s;
+
+}
+.qualification-container div{
+    background-color: #212529;
+    color: #fff;
+}
+.qualification-container .phy{
+    padding: 20px;
+    position: relative;
+    width: 50%;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.qualification-container .pyth{
+    padding: 20px;
+    position: relative;
+    left: 51%;
+    width:50%;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.qualification-container .web{
+    padding: 20px;
+    position: relative;
+    width: 50%;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.work-container{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 20px;
+    position: relative;
+    top: 15px;
+    transition: transform 0.5s;
+    display: none;
+}
+.work-container div{
+    background-color: #212529;
+    color: #fff;
+    padding: 20px;
+}
+
+.freelancing{
+    position: relative;
+    width: 50%;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.qualification-btn{
+    display: inline-block;
+}
+.qualification-btn span{
+    margin:0 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+#indicator{
+    visibility: visible;
+    width: 100px;
+    border: none;
+    background: #000;
+    height: 3px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    transform: translate(40px, -20px);
+    transition: transform 0.5s;
+}
     #cta .row{
         text-align: left;
         margin: 40px;
@@ -574,7 +649,7 @@ p{
         </div>
       </div>
     <div class="btna">
-      <a href="" >Contact Me  <i class="bi bi-send"></i> </a>
+      <a href="#contact" >Contact Me  <i class="bi bi-send"></i> </a>
     </div>
     </section>
     <section class="about" id="about">
