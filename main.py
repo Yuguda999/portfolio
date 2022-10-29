@@ -18,13 +18,13 @@ class Port(db.Model):
     body = db.Column(db.String(250))
     img_url = db.Column(db.String(250), unique=True)
 
-if os.path.isfile('portfolio.db'):
-    pass
-else:
-    with app.app_context():
-
-        #db.session.commit()
-        db.create_all()
+# if os.path.isfile('portfolio.db'):
+#     pass
+# else:
+#     with app.app_context():
+#
+#         #db.session.commit()
+#         db.create_all()
 
 
 @app.route("/")
