@@ -23,7 +23,7 @@ if os.path.isfile('portfolio.db'):
 else:
     with app.app_context():
 
-        db.session.commit()
+        #db.session.commit()
         db.create_all()
 
 
@@ -63,4 +63,4 @@ def download_file():
     return  send_from_directory(directory='static',path='ymscv.pdf')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
