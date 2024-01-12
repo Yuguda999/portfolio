@@ -50,8 +50,7 @@ def contact():
     return redirect(url_for("home"))
 
 def send_email(name, email, message):
-    OWN_EMAIL = 'yms.pyth@gmail.com'
-    OWN_PASSWORD = 'pdwjthtuonofcdfz'
+    
     email_message = f"Subject:New Message\n\nName: {name}\nEmail: {email}\n\nMessage:{message}"
     with smtplib.SMTP_SSL("smtp.gmail.com") as connection:
         #connection.starttls()
@@ -63,4 +62,4 @@ def download_file():
     return  send_from_directory(directory='static',path='ymscv.pdf')
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0", port=5000)
